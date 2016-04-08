@@ -512,13 +512,13 @@ class BoostContainerFlatSet:
         self.element_type = self.val.type.strip_typedefs().template_argument(0)
 
     def get_pointer(self):
-        return self.val["m_flat_tree"]["m_data"]["m_vect"]["members_"]["m_start"]
+        return self.val["m_data"]["m_vect"]["m_holder"]["m_start"]
 
     def get_size(self):
-        return self.val["m_flat_tree"]["m_data"]["m_vect"]["members_"]["m_size"]
+        return self.val["m_data"]["m_vect"]["m_holder"]["m_size"]
 
     def get_capacity(self):
-        return self.val["m_flat_tree"]["m_data"]["m_vect"]["members_"]["m_capacity"]
+        return self.val["m_data"]["m_vect"]["m_holder"]["m_capacity"]
 
     def has_elements(self):
         if self.get_pointer():
@@ -579,13 +579,13 @@ class BoostContainerFlatMap:
         self.value_type = self.val.type.strip_typedefs().template_argument(1)
 
     def get_pointer(self):
-        return self.val["m_flat_tree"]["m_data"]["m_vect"]["members_"]["m_start"]
+        return self.val["m_data"]["m_vect"]["m_holder"]["m_start"]
 
     def get_size(self):
-        return self.val["m_flat_tree"]["m_data"]["m_vect"]["members_"]["m_size"]
+        return self.val["m_data"]["m_vect"]["m_holder"]["m_size"]
 
     def get_capacity(self):
-        return self.val["m_flat_tree"]["m_data"]["m_vect"]["members_"]["m_capacity"]
+        return self.val["m_data"]["m_vect"]["m_holder"]["m_capacity"]
 
     def has_elements(self):
         if self.get_pointer():
